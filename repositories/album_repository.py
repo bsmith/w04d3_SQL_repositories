@@ -36,6 +36,8 @@ def select(id):
         album = Album(result['title'], result['genre'], artist, result['id'])
     return album
 
+# NB could be in artist_repository instead!
+# The DMOs would naturally have Artist.albums!
 def select_by_artist(artist):
     albums = []
     sql = "SELECT * FROM albums WHERE artist_id = %s"
